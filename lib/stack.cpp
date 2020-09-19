@@ -1,80 +1,87 @@
+#ifndef STACK_CPP
+#define STACK_CPP
+
+#include "stack.h"
+#include <cstddef>
+
+template<class T>
+Stack<T>::Stack() {
+    length = 0;
+    last = new Node();
+    last -> next = NULL;
+    _top = last;
+}
+
 template<typename T>
-class Stack {
-    struct Node {
-        T value;
-        Node* next;
-    };
+void Stack<T>::push(T _value) {
+    Node* tmp = new Node();
+    tmp -> value = _value;
+    tmp -> next = _top;
+    _top = tmp;
+    length++;
+}
 
-    unsigned int length;
-    Node* _top;
-    Node* last;
+template<typename T>
+void Stack<T>::pop() {
+    if(length == 0) return;
+    Node* ptop = _top;
+    _top = _top -> next;
+    delete ptop;
+    length--;
+}
 
-public:
-    Stack() {
-        length = 0;
-        last = new Node();
-        last -> next = NULL;
-        _top = last;
-    }
+template<typename T>
+T Stack<T>::top() {
+    if(length == 0) return 0;
+    return _top -> value;
+}
 
-    void push(T _value) {
-        Node* tmp = new Node();
-        tmp -> value = _value;
-        tmp -> next = _top;
-        _top = tmp;
-        length++;
-    }
-    void pop() {
-        if(length == 0) return;
-        Node* ptop = _top;
-        _top = _top -> next;
-        delete ptop;
-        length--;
-    }
-    T top() {
-        if(length == 0) return 0;
-        return _top -> value;
-    }
-    void print(string separator = " ") {
-        for(Node* i=_top;i!=NULL;i=i->next){
-            cout<<i->value<<separator;
-        }
-    }
+template<typename T>
+Stack<T>::iterator::iterator(const iterator& other) {
+    this->curr = other.curr;
+}
 
-    class iterator {
-        Node* curr;
+template<typename T>
+Stack<T>::iterator::iterator(Node* node) {
+    curr = node;
+}
 
-        public:
-        iterator(const iterator& other) {
-            this->curr = other.curr;
-        }
-        iterator(Node* node) {
-            curr = node;
-        }
-        T operator*() {
-            return curr->value;
-        }
-        iterator& operator++() {
-            curr = curr -> next;
-            return *this;
-        }
-        iterator operator++(int) {
-            iterator tmp = *this;
-            curr = curr -> next;
-            return tmp;
-        }
-        bool operator!=(const iterator& other) {
-            return other.curr != this->curr;
-        }
-        bool operator==(const iterator& other) {
-            return other.curr == this->curr;
-        }
-    };
+template<typename T>
+T Stack<T>::iterator::operator*() {
+    return curr->value;
+}
 
-    iterator begin() {
-        return iterator(_top);
-    }
-    iterator end() {
-        return iterator(last);
-    }
-};
+template<typename T>
+typename Stack<T>::iterator& Stack<T>::iterator::operator++() {
+    curr = curr -> next;
+    return *this;
+}
+
+template<typename T>
+typename Stack<T>::iterator Stack<T>::iterator::operator++(int) {
+    iterator tmp = *this;
+    curr = curr -> next;
+    return tmp;
+}
+
+template<typename T>
+bool Stack<T>::iterator::operator!=(const iterator& other) {
+    return other.curr != this->curr;
+}
+
+template<typename T>
+bool Stack<T>::iterator::operator==(const iterator& other) {
+    return other.curr == this->curr;
+}
+
+template<typename T>
+typename Stack<T>::iterator Stack<T>::begin() {
+    return iterator(_top);
+}
+
+template<typename T>
+typename Stack<T>::iterator Stack<T>::end() {
+    return iterator(last);
+}
+
+#endif
