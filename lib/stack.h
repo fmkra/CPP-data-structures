@@ -16,6 +16,8 @@ class Stack {
     void push(T);
     void pop();
     T top();
+    unsigned int size();
+    bool empty();
 
     class iterator {
         Node* curr;

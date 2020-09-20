@@ -37,6 +37,16 @@ T Stack<T>::top() {
 }
 
 template<typename T>
+unsigned int Stack<T>::size() {
+    return length;
+}
+
+template<typename T>
+bool Stack<T>::empty() {
+    return length == 0;
+}
+
+template<typename T>
 Stack<T>::iterator::iterator(const iterator& other) {
     this->curr = other.curr;
 }
