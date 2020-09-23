@@ -2,8 +2,9 @@
 
 ## Table of contents
 - [Stack](#stack)
+  - [Template arguments](#template-arguments)
   - [Functions](#functions)
-
+  - [Example](#example)
 ---
 
 ## Stack
@@ -17,7 +18,7 @@
 
 Return: `none`
 <br>
-Arguments: `value`
+Arguments: `T`
 
 Pushes element with a given value on the top of a stack.
 
@@ -31,18 +32,40 @@ Removes element from the top of a stack.
 
 #### top
 
-Return: `top element`
+Return: `T`
 <br>
 Arguments: `none`
 
 Gets value of the top element.
 
-#### begin
-Return: `iterator to the top element`
+#### size
+
+Return: `unsigned int`
 <br>
 Arguments: `none`
 
-#### end
-Return: `iterator to the element past the last`
+Gets size of the stack.
+
+#### empty
+
+Return: `bool`
 <br>
 Arguments: `none`
+
+Returns whether the stack is empty.
+
+#### begin
+Return: `iterator`
+<br>
+Arguments: `none`
+
+Returns iterator object to the first element.
+
+#### end
+Return: `iterator`
+<br>
+Arguments: `none`
+
+Returns iterator object to the element past the last.
+
+### Example

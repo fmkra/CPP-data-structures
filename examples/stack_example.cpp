@@ -10,6 +10,7 @@ int main() {
     s.push(3); // 3 4
     std::cout << s.top() << "\n";
     s.push(2); // 2 3 4
+    std::cout<<s.size()<<"\n";
 
     for(Stack<int>::iterator i = s.begin(); i != s.end(); ++i)
         std::cout << *i << " ";
