@@ -2,9 +2,9 @@
 
 ## Table of contents
 - [Stack](#stack)
-  - [Template arguments](#template-arguments-1)
-  - [Functions](#functions-1)
-  - [Usage](#usage-1)
+  - [Template arguments](#template-arguments)
+  - [Functions](#functions)
+  - [Usage](#usage)
 - [List](#list)
   - [Template arguments](#template-arguments-2)
   - [Functions](#functions)
