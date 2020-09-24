@@ -121,7 +121,7 @@ for(Stack<int>::iterator i = s.begin(); i != s.end(); ++i) {
 
 [Full example code](examples/stack.cpp)
 
-
+---
 
 
 ## List
