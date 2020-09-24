@@ -5,6 +5,10 @@
   - [Template arguments](#template-arguments)
   - [Functions](#functions)
   - [Usage](#usage)
+- [List](#list)
+  - [Template arguments](#template-arguments2)
+  - [Functions](#functions2)
+  - [Usage](#usage2)
 ---
 
 ## Stack
@@ -115,3 +119,101 @@ for(Stack<int>::iterator i = s.begin(); i != s.end(); ++i) {
 ```
 
 [Full example code](examples/stack.cpp)
+
+
+
+
+## List
+
+### Template arguments
+`T` - Type of elements.
+
+### Functions
+
+#### push_front
+
+Return: `none`
+<br>
+Arguments: `T`
+
+Pushes element with a given value in the front of a list.
+
+#### push_back
+
+Return: `none`
+<br>
+Arguments: `T`
+
+Pushes element with a given value in the back of a list.
+
+#### front
+
+Return: `none`
+<br>
+Arguments: `none`
+
+Gets value of the front element.
+
+#### back
+
+Return: `T`
+<br>
+Arguments: `none`
+
+Gets value of the back element.
+
+#### size
+
+Return: `unsigned int`
+<br>
+Arguments: `none`
+
+Gets size of the list.
+
+#### empty
+
+Return: `bool`
+<br>
+Arguments: `none`
+
+Returns whether the list is empty.
+
+#### begin
+Return: `iterator`
+<br>
+Arguments: `none`
+
+Returns iterator object to the front element.
+
+#### end
+Return: `iterator`
+<br>
+Arguments: `none`
+
+Returns iterator object to past the back element.
+
+### Usage
+
+Library include
+```
+#include "path/to/Basic-Data-Structures/lib/list.h"
+```
+
+List declaration
+```
+List<int> l;
+```
+
+Basic `push_front`, `push_back`, `front` and `back` usage
+```
+
+```
+
+Printing list using `iterator`
+```
+for(List<int>::iterator i = l.begin(); l != s.end(); ++l) {
+    cout << *l << "\n";
+}
+```
+
+[Full example code](examples/list.cpp)
