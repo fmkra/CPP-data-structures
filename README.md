@@ -6,9 +6,9 @@
   - [Functions](#functions)
   - [Usage](#usage)
 - [List](#list)
-  - [Template arguments](#template-arguments2)
-  - [Functions](#functions2)
-  - [Usage](#usage2)
+  - [Template arguments](#template-arguments-2)
+  - [Functions](#functions-2)
+  - [Usage](#usage-2)
 ---
 
 ## Stack
