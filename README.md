@@ -7,7 +7,7 @@
   - [Usage](#usage)
 - [List](#list)
   - [Template arguments](#template-arguments-2)
-  - [Functions](#functions-2)
+  - [Functions](#functions)
   - [Usage](#usage-2)
 ---
 
