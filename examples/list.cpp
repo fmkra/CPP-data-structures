@@ -1,4 +1,4 @@
-#include "../lib/list.cpp"
+#include "../lib/list.h"
 #include <iostream>
 
 int main() {
