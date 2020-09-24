@@ -76,17 +76,17 @@ Returns iterator object to the element past the last.
 ### Usage
 
 Library include
-```
+```c++
 #include "path/to/Basic-Data-Structures/lib/stack.h"
 ```
 
 Stack declaration
-```
+```c++
 Stack<int> s;
 ```
 
 Basic `push`, `pop` and `top` usage
-```
+```c++
 s.push(4);                      // stack:  4
 s.push(1);                      // stack:  1 4
 s.pop();                        // stack:  4
@@ -97,7 +97,7 @@ std::cout << s.top() << "\n";   // prints: 2
 ```
 
 Printing stack using `size` and `pop`
-```
+```c++
 for(int i = 0; i < s.size(); i++) {
     std::cout << s.top() << "\n";
     s.pop();
@@ -105,7 +105,7 @@ for(int i = 0; i < s.size(); i++) {
 ```
 
 Printing stack using `empty` and `pop`
-```
+```c++
 while(!s.empty()) {
     std::cout << s.top() << "\n";
     s.pop();
@@ -113,7 +113,7 @@ while(!s.empty()) {
 ```
 
 Printing stack using `iterator`
-```
+```c++
 for(Stack<int>::iterator i = s.begin(); i != s.end(); ++i) {
     cout << *i << "\n";
 }
@@ -196,22 +196,22 @@ Returns iterator object to past the back element.
 ### Usage
 
 Library include
-```
+```c++
 #include "path/to/Basic-Data-Structures/lib/list.h"
 ```
 
 List declaration
-```
+```c++
 List<int> l;
 ```
 
 Basic `push_front`, `push_back`, `front` and `back` usage
-```
+```c++
 
 ```
 
 Printing list using `iterator`
-```
+```c++
 for(List<int>::iterator i = l.begin(); l != s.end(); ++l) {
     cout << *l << "\n";
 }
