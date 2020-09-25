@@ -9,6 +9,10 @@
   - [Template arguments](#template-arguments-1)
   - [Functions](#functions-1)
   - [Usage](#usage-1)
+- [Binary Search Tree](#binary-search-tree)
+  - [Template arguments](#template-arguments-2)
+  - [Functions](#functions-2)
+  - [Usage](#usage-2)
 ---
 
 
@@ -246,6 +250,18 @@ Returns whether a given value exist in the tree.
 
 Return type: `none`
 <br>
-Arguments: `value`
+Arguments: `T`
 
 Removes given value from the tree if it exist.
+
+### Usage
+
+Library include
+```c++
+#include "path/to/Basic-Data-Structures/lib/bstree.h"
+```
+
+BSTree declaration
+```c++
+BSTree<int> l;
+```
