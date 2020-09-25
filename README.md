@@ -13,6 +13,7 @@
   - [Template arguments](#template-arguments-2)
   - [Functions](#functions-2)
   - [Usage](#usage-2)
+  - [Printing](#printing)
 ---
 
 
@@ -264,4 +265,41 @@ Library include
 BSTree declaration
 ```c++
 BSTree<int> l;
+```
+
+Insertion
+```c++
+tree.insert(2);
+tree.insert(4);
+tree.insert(1);
+tree.insert(5);
+tree.insert(3);
+/*
+      now tree looks like this:
+
+        2
+       / \
+      1   4
+         / \
+        3   5
+*/
+```
+
+### Printing
+
+You can print BSTree using BSTreePrinter class.
+These are available functions:
+```c++
+static void print(BSTree<T>*)
+static void print(BSTree<T>&);
+```
+Example:
+```c++
+BSTree<int> t;
+// some insert operations here
+BSTreePrinter<int>::print(t); // tree object passed by reference
+```
+or
+```c++
+BSTreePrinter<int>::print(&t); // tree object passed by pointer
 ```
