@@ -218,3 +218,34 @@ for(List<int>::iterator i = l.begin(); l != s.end(); ++l) {
 ```
 
 [Full example code](examples/list.cpp)
+
+## Binary Search Tree
+
+### Template arguments
+`T` - Type of elements.
+
+### Functions
+
+#### insert
+
+Return type: `none`
+<br>
+Arguments: `T`
+
+Inserts a given value to the tree.
+
+#### search
+
+Return type: `bool`
+<br>
+Arguments: `T`
+
+Returns whether a given value exist in the tree.
+
+#### remove
+
+Return type: `none`
+<br>
+Arguments: `value`
+
+Removes given value from the tree if it exist.
