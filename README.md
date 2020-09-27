@@ -117,7 +117,7 @@ while(!s.empty()) {
 }
 ```
 
-Printing stack using `iterator`
+Printing stack using `iterator` (recommended way)
 ```c++
 for(Stack<int>::iterator i = s.begin(); i != s.end(); ++i) {
     cout << *i << "\n";
@@ -215,7 +215,7 @@ Basic `push_front`, `push_back`, `front` and `back` usage
 
 ```
 
-Printing list using `iterator`
+Printing list using `iterator` (recommened way)
 ```c++
 for(List<int>::iterator i = l.begin(); l != s.end(); ++l) {
     cout << *l << "\n";
