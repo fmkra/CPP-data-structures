@@ -303,3 +303,5 @@ or
 ```c++
 BSTreePrinter<int>::print(&t); // tree object passed by pointer
 ```
+
+[Full example code](examples/bstree.cpp)
