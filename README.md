@@ -224,6 +224,8 @@ for(List<int>::iterator i = l.begin(); l != s.end(); ++l) {
 
 [Full example code](examples/list.cpp)
 
+---
+
 ## Binary Search Tree
 
 ### Template arguments
