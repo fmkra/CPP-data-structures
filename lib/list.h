@@ -24,9 +24,9 @@ class List {
 
     /*
      *  TODO:
-     *    begin(), end(), rbegin(), rend()
+     *    rbegin(), rend()
      *    size()
-     *    empty()
+     *    empty() 
      */
 
     // class iterator is used to iterate over elements of a List
@@ -47,8 +47,8 @@ class List {
          */
     };
 
-    iterator begin();
-    iterator end();
+    iterator begin(); // returns iterator to the first element
+    iterator end(); // returns iterator to one past the last element
 };
 
 #include "list.cpp"
