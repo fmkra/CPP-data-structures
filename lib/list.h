@@ -24,7 +24,7 @@ class List {
 
     /*
      *  TODO:
-     *    begin(), end(), rbegin(), rend()
+     *    rbegin(), rend()
      *    size()
      *    empty()
      */
@@ -47,8 +47,8 @@ class List {
          */
     };
 
-    iterator begin();
-    iterator end();
+    iterator begin(); // returns iterator to the first element
+    iterator end(); // returns iterator to one past the last element
 };
 
 #include "list.cpp"
