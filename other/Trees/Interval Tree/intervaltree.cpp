@@ -15,6 +15,12 @@ struct ITComparator {
       return max(a,b);
     }
   };
+  struct Min {
+    static const T neutralValue = numeric_limits<T>::max();
+    static T operation(const T& a, const T& b) {
+      return min(a,b);
+    }
+  };
   struct Product {
     static const T neutralValue = 1;
     static T operation(const T& a, const T& b) {
@@ -89,16 +95,17 @@ public:
       return;
     }
     T* tmp = new T[_width];
-    for(int i=0;i<_width;i++) tmp[i]=d[_width+i];
+    for(unsigned int i=0;i<_width;i++) tmp[i]=d[_width+i];
     _width*=2;
     d = new T[2*_width];
-    for(int i=0;i<_width/2;i++) d[_width+i]=tmp[i];
+    for(unsigned int i=0;i<_width/2;i++) d[_width+i]=tmp[i];
+    delete tmp;
     d[3*_width/2]=x;
-    for(int i=_width/2+1;i<_width;i++) d[_width+i]=Comparator::neutralValue;
+    for(unsigned int i=_width/2+1;i<_width;i++) d[_width+i]=Comparator::neutralValue;
     for(unsigned int i=_width-1;i>0;i--) d[i]=Comparator::operation(d[2*i],d[2*i+1]);
   }
   void print() {
-    int p = 2;
+    unsigned int p = 2;
     for(int i=1;i<2*_width;i++) {
       cout<<d[i]<<" ";
       if(i==p-1) {
@@ -109,7 +116,9 @@ public:
   }
 };
 
-int main() {  
-  IntervalTree<int,ITComparator<int>::Max> a(5,0);
+int main() {
+  IntervalTree<int,ITComparator<int>::Max> a(4,0);
+  a.print();
+  a.push_back(4);
   a.print();
 }
