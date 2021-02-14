@@ -13,11 +13,12 @@ class Stack {
 
   public:
     Stack();
+    Stack(const Stack<T>&);
     void push(T);
     void pop();
-    T top();
-    unsigned int size();
-    bool empty();
+    T top() const;
+    unsigned int size() const;
+    bool empty() const;
 
     class iterator {
         Node* curr;

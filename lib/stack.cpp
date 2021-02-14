@@ -11,6 +11,21 @@ Stack<T>::Stack() {
     last -> next = NULL;
     _top = last;
 }
+template<class T>
+Stack<T>::Stack(const Stack<T>& other) {
+    length = 0;
+    last = new Node();
+    last -> next = NULL;
+    _top = last;
+    Node* cur = other._top;
+    T* tmp = new T[other.size()];
+    for(int i=0;cur!=other.last;i++) {
+      tmp[i] = cur->value;
+      cur = cur->next;
+    }
+    for(int i=other.size()-1;i>=0;i--) push(tmp[i]);
+
+}
 
 template<typename T>
 void Stack<T>::push(T _value) {
@@ -31,18 +46,18 @@ void Stack<T>::pop() {
 }
 
 template<typename T>
-T Stack<T>::top() {
+T Stack<T>::top() const {
     if(length == 0) return 0;
     return _top -> value;
 }
 
 template<typename T>
-unsigned int Stack<T>::size() {
+unsigned int Stack<T>::size() const {
     return length;
 }
 
 template<typename T>
-bool Stack<T>::empty() {
+bool Stack<T>::empty() const {
     return length == 0;
 }
 
