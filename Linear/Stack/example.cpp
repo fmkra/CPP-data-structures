@@ -1,4 +1,4 @@
-#include "../lib/stack.h" // replace ../ with path to the library folder
+#include "../../include/stack" // replace ../../ with path to the library folder
 #include <iostream> // iostream for printing
 
 int main() {
