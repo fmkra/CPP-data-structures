@@ -47,6 +47,34 @@ class List {
       last = node;
       length++;
     }
+    void pop_front() {
+      if(length==0) return;
+      if(length==1) {
+        last = NULL;
+        first = NULL;
+        length--;
+        return;
+      }
+      Node* node = first;
+      first = first -> next;
+      first -> prev = NULL;
+      delete node;
+      length--;
+    }
+    void pop_back() {
+      if(length==0) return;
+      if(length==1) {
+        last = NULL;
+        first = NULL;
+        length--;
+        return;
+      }
+      Node* node = last;
+      last = last -> prev;
+      last -> next = NULL;
+      delete node;
+      length--;
+    }
 
     /*
      *  TODO:
@@ -78,6 +106,7 @@ class List {
 
         /*
          *  TODO:
+         *    constructor(List)
          *    postfix ++ operator
          *    postfix and prefix -- operator
          *    is equal to operator
