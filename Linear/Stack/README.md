@@ -108,8 +108,8 @@ for(Stack<int>::iterator i = s.begin(); i != s.end(); ++i) {
 Print stack using `iterator` with range-based for loop and auto
 ```c++
 for(auto i : s) {
-  std::cout << i << "\n";
+    std::cout << i << "\n";
 }
-zzz
+```
 
 [Full example code](example.cpp)
