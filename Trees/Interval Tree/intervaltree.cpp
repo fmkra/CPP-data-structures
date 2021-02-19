@@ -60,7 +60,7 @@ class IntervalTree {
   }
 public:
   // constructor from size
-  IntervalTree(const unsigned int size = 0, T fill = Operation::identityElement, T fillrest = Operation::identityElement) {
+  IntervalTree(const unsigned int size = 0, T fill = Operation::identityElement) {
     _size = size;
     _width = 1;
     _height = 1;
@@ -70,11 +70,11 @@ public:
     }
     d = new T[2*_width];
     for(unsigned int i=0;i<_size;i++) d[_width+i]=fill;
-    for(unsigned int i=_size;i<_width;i++) d[_width+i]=fillrest;
+    for(unsigned int i=_size;i<_width;i++) d[_width+i]=Operation::identityElement;
     for(unsigned int i=_width-1;i>0;i--) d[i]=Operation::operation(d[2*i],d[2*i+1]);
   }
   // constructor from array
-  IntervalTree(const T* array, const unsigned int size, T fillrest = Operation::identityElement) {
+  IntervalTree(const T* array, const unsigned int size) {
     _size = size;
     _width = 1;
     _height = 1;
@@ -84,7 +84,7 @@ public:
     }
     d = new T[2*_width];
     for(unsigned int i=0;i<_size;i++) d[_width+i]=array[i];
-    for(unsigned int i=_size;i<_width;i++) d[_width+i]=fillrest;
+    for(unsigned int i=_size;i<_width;i++) d[_width+i]=Operation::identityElement;
     for(unsigned int i=_width-1;i>0;i--) d[i]=Operation::operation(d[2*i],d[2*i+1]);
   }
   T query(unsigned int p, unsigned int q) {
@@ -108,6 +108,12 @@ public:
     d[3*_width/2]=x;
     for(unsigned int i=_width/2+1;i<_width;i++) d[_width+i]=Operation::identityElement;
     for(unsigned int i=_width-1;i>0;i--) d[i]=Operation::operation(d[2*i],d[2*i+1]);
+  }
+  unsigned int size() {
+    return _size;
+  }
+  bool empty() {
+    return _size==0;
   }
   void print() {
     unsigned int p = 2;
