@@ -1,12 +1,12 @@
 # Interval Tree
 
-### Template  arguments
+## Template  arguments
 
-`T` - Type of variables stored
+`T` - Type of elements
 <br>
 `Operation` - Struct that defines what operation tree uses [More here](#operations)
 
-### Constructors
+## Constructors
 
 `()` - Constructs tree of size 0
 <br>
@@ -16,44 +16,44 @@
 <br>
 `(const T* array, unsigned int size)` - Constructs tree from an `array`
 
-### Functions
+## Functions
 
-#### push_back
+### push_back
 Return: `none`
 <br>
 Arguments: `T`
 
 Adds an element to the end.
 
-#### set
+### set
 Return: `none`
 <br>
 Arguments: `unsigned int`, `T`
 
 Changes element on a given position.
 
-#### query
+### query
 Return: `T`
 <br>
 Arguments: `unsigned int`, `unsigned int`
 
 Returns answer for query on interval `[p,q]`.
 
-#### size
+### size
 Return: `unsigned int`
 <br>
 Arguments: `none`
 
 Returns size of the tree.
 
-#### empty
+### empty
 Return: `bool`
 <br>
 Arguments: `none`
 
 Returns whether the tree is empty.
 
-#### print
+### print
 Return: `none`
 <br>
 Arguments: `none`
@@ -61,7 +61,7 @@ Arguments: `none`
 Prints whole tree using `std::cout`.
 
 
-### Operations
+## Operations
 
 Interval tree can do every <a href="https://en.wikipedia.org/wiki/Associative_property" target="_blank">associative operation</a>. Those are implemented operations:
 - addition - `IntervalTreeOperation<T>::Sum`
@@ -89,7 +89,7 @@ struct BitwiseAnd {
 IntervalTree<int,BitwiseAnd> tree;
 ```
 
-### Usage
+## Usage
 
 Library include
 ```c++
