@@ -82,15 +82,7 @@ s.push(2);                      // stack:  2 3 4
 std::cout << s.top() << "\n";   // prints: 2
 ```
 
-Print stack using `size` and `pop`
-```c++
-for(int i = 0; i < s.size(); i++) {
-    std::cout << s.top() << "\n";
-    s.pop();
-}
-```
-
-Print stack using `empty` and `pop`
+Print stack using `empty`, `top` and `pop`
 ```c++
 while(!s.empty()) {
     std::cout << s.top() << "\n";
@@ -105,7 +97,7 @@ for(Stack<int>::iterator i = s.begin(); i != s.end(); ++i) {
 }
 ```
 
-Print stack using `iterator` with range-based for loop and auto
+Print stack using `iterator` with `range-based for loop` and `auto` (recommended way for C++11 and higher)
 ```c++
 for(auto i : s) {
     std::cout << i << "\n";
