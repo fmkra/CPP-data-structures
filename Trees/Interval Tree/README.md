@@ -11,7 +11,6 @@
 #### constructor
 
 #### push_back
-
 Return: `none`
 <br>
 Arguments: `T`
@@ -19,16 +18,23 @@ Arguments: `T`
 Adds an element to the end.
 
 #### set
-
 Return: `none`
 <br>
 Arguments: `unsigned int`, `T`
 
 Changes element on a given position.
 
-#### query(unsigned int, unsigned int)
+#### query
+Return: `T`
+<br>
+Arguments: `unsigned int`, `unsigned int`
 
-#### print()
+Returns answer for query in interval `[p,q]`.
+
+#### print
+Return: `none`
+<br>
+Arguments: `none`
 
 
 ### Operations
