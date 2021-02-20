@@ -1,4 +1,5 @@
-#include "../lib/bstreeprinter.h"
+#include "../../include/bstree"
+#include "../../include/bstreeprinter"
 #include <iostream>
 
 int main() {
