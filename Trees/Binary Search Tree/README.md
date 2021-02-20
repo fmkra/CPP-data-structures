@@ -62,7 +62,11 @@ tree.insert(3);
 ### Printing
 
 You can print BSTree using BSTreePrinter class.
-These are available functions:
+Library include:
+```c++
+#include "path/to/Basic-Data-Structures/include/bstreeprinter"
+```
+Available functions:
 ```c++
 static void print(BSTree<T>*);
 static void print(BSTree<T>&);
