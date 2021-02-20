@@ -56,7 +56,7 @@ s.merge(1,2); // {1} {2} => {1,2}
 std::cout << s.find(1) == s.find(2) << "\n"; // true
 std::cout << s.find(2) == s.find(4) << "\n"; // false
 s.merge(1,4); // {1,2} {4} => {1,2,4}
-// {1,2,4} {3} {4}
+// {1,2,4} {3} {5}
 std::cout << s.find(2) == s.find(4) << "\n"; // true
 ```
 [Full example code](example.cpp)
