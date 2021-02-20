@@ -64,7 +64,7 @@ tree.insert(3);
 You can print BSTree using BSTreePrinter class.
 These are available functions:
 ```c++
-static void print(BSTree<T>*)
+static void print(BSTree<T>*);
 static void print(BSTree<T>&);
 ```
 Example:
