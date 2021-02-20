@@ -47,7 +47,7 @@ Disjoint-set declaration
 DisjointSet s;    // size 0
 DisjointSet s(5); // size 5
 ```
-Basic `find` ans `merge` usage
+Basic `find` and `merge` usage
 ```c++
 // {1} {2} {3} {4} {5}
 std::cout << s.find(1) == s.find(2) << "\n"; // false
