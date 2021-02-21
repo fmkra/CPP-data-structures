@@ -31,7 +31,7 @@
     - [Usage](#usage-5)
 - Other
   - [Disjoint-set](#disjoint-set)
-    - [Constructors](#constructors-2)
+    - [Constructors](#constructors-1)
     - [Functions](#functions-6)
     - [Usage](#usage-6)
 
