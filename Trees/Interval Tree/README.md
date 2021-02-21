@@ -1,6 +1,6 @@
 # Interval Tree
 
-## Template  arguments
+## Template arguments
 
 `T` - Type of elements
 <br>
