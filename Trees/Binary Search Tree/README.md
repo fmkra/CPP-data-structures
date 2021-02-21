@@ -82,4 +82,4 @@ or
 BSTreePrinter<int>::print(&t); // tree object passed by pointer
 ```
 
-[Full example code](examples/bstree.cpp)
+[Full example code](example.cpp)
