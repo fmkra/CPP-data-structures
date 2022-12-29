@@ -1,4 +1,6 @@
-# Basic Data Structures
+# C++ Data Structures
+
+Simple implementation of some data structures in C++
 
 ## Table of content
 - Linear
